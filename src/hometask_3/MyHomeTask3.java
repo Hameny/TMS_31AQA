@@ -34,7 +34,7 @@ public class MyHomeTask3 {
       default -> "Некорректный номер месяца";
     };
     System.out.println("Пора года: " + season);
-    System.out.println("///////////////////////////////////");
+    System.out.println("//////////////////////////////////////");
   }
 
   public static void displaySeasonWithIfElse(Scanner scanner) {
