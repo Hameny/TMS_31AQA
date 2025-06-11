@@ -149,7 +149,7 @@ public class MyHomeTask4 {
     System.out.println("Среднее значение: " + average);
   }
 
-  public static void comparisonArray(Scanner scanner){
+  public static void comparisonArray(Scanner scanner) {
     int[] array1 = new int[5];
     int[] array2 = new int[5];
 
@@ -176,23 +176,19 @@ public class MyHomeTask4 {
     } else {
       System.out.println("Средние арифметические массивов равны.");
     }
-
-    scanner.close();
   }
 
   private static void fillArray(int[] array, Scanner scanner) {
     int count = 0;
     while (count < array.length) {
       System.out.printf("Введите число #%d: ", count + 1);
-      if (scanner.hasNextLine()) {
-        String input = scanner.nextLine();
-        try {
-          int num = Integer.parseInt(input.trim());
-          array[count] = num;
-          count++;
-        } catch (NumberFormatException e) {
-          System.out.println("Ошибка: введено не число. Пожалуйста, попробуйте снова.");
-        }
+      String input = scanner.nextLine();
+      try {
+        int num = Integer.parseInt(input.trim());
+        array[count] = num;
+        count++;
+      } catch (NumberFormatException e) {
+        System.out.println("Ошибка: введено не число. Пожалуйста, попробуйте снова.");
       }
     }
   }
@@ -218,13 +214,14 @@ public class MyHomeTask4 {
     return (double) sum / array.length;
   }
 
-  public static void printTwoArray(Scanner scanner){
+  public static void printTwoArray(Scanner scanner) {
     int p;
 
     while (true) {
       System.out.print("Введите размер массива (от 6 до 10): ");
       if (scanner.hasNextInt()) {
         p = scanner.nextInt();
+        scanner.nextLine();
         if (p > 5 && p <= 10) {
           break;
         } else {
@@ -240,7 +237,7 @@ public class MyHomeTask4 {
     Random rand = new Random();
 
     for (int i = 0; i < p; i++) {
-      array[i] = rand.nextInt(100) - 50; // случайные числа от -50 до 49
+      array[i] = rand.nextInt(100) - 50;
     }
 
     System.out.println("Исходный массив:");
@@ -267,7 +264,7 @@ public class MyHomeTask4 {
     }
   }
 
-  public static void changingArray(){
+  public static void changingArray() {
     int[] array = {1, 4, 123, 422, 511, 698, 7222, 18, 2219, 1000};
 
     System.out.println("Исходный массив:");
@@ -287,7 +284,7 @@ public class MyHomeTask4 {
     System.out.println();
   }
 
-  public static void sortingName(){
+  public static void sortingName() {
     String[] names = {
         "Иван",
         "Алексей",
@@ -307,7 +304,7 @@ public class MyHomeTask4 {
     }
   }
 
-  public static void sortBubble(){
+  public static void sortBubble() {
     int[] array = {64, 34, 25, 12, 22, 11, 90};
 
     System.out.println("Исходный массив:");
@@ -343,5 +340,5 @@ public class MyHomeTask4 {
     }
     System.out.println();
   }
-
 }
+
