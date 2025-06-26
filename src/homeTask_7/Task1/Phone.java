@@ -1,4 +1,4 @@
-package homeTask_7;
+package homeTask_7.Task1;
 
 public class Phone {
   private String number;
