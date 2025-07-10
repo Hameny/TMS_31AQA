@@ -7,7 +7,6 @@ public class DocumentProcessor {
     System.out.println("Первые два блока по 4 цифры: " + blocks[0] + " " + blocks[2]);
   }
 
-  // 2. Заменить блоки из трех букв на ***
   public static void replaceLettersWithStars(String docNumber) {
     String[] blocks = docNumber.split("-");
     for (int i = 0; i < blocks.length; i++) {
@@ -18,7 +17,6 @@ public class DocumentProcessor {
     System.out.println("Документ с замененными буквами: " + String.join("-", blocks));
   }
 
-  // 3. Вывести буквы в формате ууу/yyy/y/y в нижнем регистре
   public static void printLettersInFormat(String docNumber) {
     StringBuilder letters = new StringBuilder();
     for (char c : docNumber.toCharArray()) {
@@ -36,7 +34,6 @@ public class DocumentProcessor {
     }
   }
 
-  // 4. Вывести буквы с использованием StringBuilder в верхнем регистре
   public static void printLettersWithStringBuilder(String docNumber) {
     StringBuilder letters = new StringBuilder("Letters:");
     int letterCount = 0;
@@ -54,7 +51,6 @@ public class DocumentProcessor {
     System.out.println(letters.toString());
   }
 
-  // 5. Проверить наличие последовательности abc (без учета регистра)
   public static void checkForAbcSequence(String docNumber) {
     if (docNumber.toLowerCase().contains("abc")) {
       System.out.println("Документ содержит последовательность 'abc'");
@@ -63,7 +59,6 @@ public class DocumentProcessor {
     }
   }
 
-  // 6. Проверить начинается ли с 555
   public static void checkStartsWith555(String docNumber) {
     if (docNumber.startsWith("555")) {
       System.out.println("Документ начинается с '555'");
@@ -72,7 +67,6 @@ public class DocumentProcessor {
     }
   }
 
-  // 7. Проверить заканчивается ли на 1a2b
   public static void checkEndsWith1a2b(String docNumber) {
     if (docNumber.toLowerCase().endsWith("1a2b")) {
       System.out.println("Документ заканчивается на '1a2b'");
